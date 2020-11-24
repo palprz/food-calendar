@@ -5,14 +5,11 @@ With using Electron, application can be run on many operation systems (Windows, 
 
 ## Screenshots from running app
 
-|![Main view](github-screenshots/main-view.png)|
--
+![Main view](github-screenshots/main-view.png)
 
-|![Create new notes](github-screenshots/create-new-notes.png)|
--
+![Create new notes](github-screenshots/create-new-notes.png)
 
-|![Edit existing notes](github-screenshots/edit-existing-notes.png)|
--
+![Edit existing notes](github-screenshots/edit-existing-notes.png)
 
 ## Technologies
 
