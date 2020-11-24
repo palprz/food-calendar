@@ -1,0 +1,20 @@
+{
+  "name": "food-calendar",
+  "version": "0.0.1",
+  "description": "Food Calendar",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "ejs-electron": "^2.1.1",
+    "electron": "^10.1.5",
+    "electron-reload": "^1.5.0",
+    "electron-store": "^6.0.1",
+    "jshint": "^2.12.0"
+  }
+}

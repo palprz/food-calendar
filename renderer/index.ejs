@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>The Index Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="bulma.min.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="columns">
+      <div class="column">
+        <p class="title"><span class="has-text-weight-bold"><%= displayMonth %></span>
+          <%= displayYear %></p>
+      </div>
+      <div class="column has-text-right">
+        <button class="button is-normal" onclick="rerenderMonth('previous','<%= highlightedDayID %>')"><i
+            class="fas fa-chevron-left"></i></button>
+        <button class="button is-normal" onclick="rerenderMonth('current','<%= highlightedDayID %>')">Today</button>
+        <button class="button is-normal" onclick="rerenderMonth('next','<%= highlightedDayID %>')"><i
+            class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <div id="calendar-container">
+    <!-- Week day headers -->
+    <div>
+      <% for(var i=0; i < daysOfWeek.length; i++) {%>
+      <div class="day-header"><%= daysOfWeek[i] %></div>
+      <% } %>
+    </div>
+
+    <!-- Empty days from previous month -->
+    <% for(var i=0; i < previousMonthDays; i++) {%>
+    <div class="day-cell-empty"></div>
+    <% } %>
+
+    <!-- Days for the current month -->
+    <% for(var i=0; i < calendarDays.length; i++) {%>
+    <div class="day-cell day-<%= calendarDays[i].dayOfWeek %>" onclick="clickedDay('<%= calendarDays[i].id %>')">
+      <% if (calendarDays[i].id == highlightedDayID) { %>
+      <div class="calendar-day-date highlighted-day">
+        <%= calendarDays[i].displayDate %>
+      </div>
+      <% } else {%>
+      <div class="calendar-day-date">
+        <%= calendarDays[i].displayDate %>
+      </div>
+      <% }%>
+      <div class="img-container">
+        <% if (calendarDays[i].hasImage) { %>
+        <img src="<%= userDataPath %>/<%= calendarDays[i].id %>.png" alt="">
+        <% }%>
+      </div>
+      <% if (calendarDays[i].notes) { %>
+      <div class="calendar-day-notes">
+        <%= calendarDays[i].notes %>
+      </div>
+      <% }%>
+    </div>
+    <% } %>
+
+    <!-- Empty days from next month -->
+    <% for(var i=0; i < nextMonthDays; i++) {%>
+    <div class="day-cell-empty"></div>
+    <% } %>
+  </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

@@ -1,0 +1,7 @@
+{
+  "esversion": 9,
+  "node": true,
+  "browser": true,
+  "globalstrict": true,
+  "eqeqeq": true
+}

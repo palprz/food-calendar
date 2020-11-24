@@ -1,0 +1,20 @@
+
+.img-container #img {
+  cursor: pointer;
+  height: 300px;
+}
+
+textarea {
+  min-height: 15em !important;
+  /* Not sure if it's a good idea but we will see! */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.file-label {
+  width: auto !important;
+}
+
+.checkbox {
+  margin: 10px 0 20px 0;
+}
