@@ -1,7 +1,7 @@
-# Food Calendar [November 2020]
+# Food Calendar
 
 Desktop application to provide pictures of food (or anything else!) with notes to the calendar.
-With using Electron, application can be run on many operation systems (Windows, MacOS, Linux)
+With using Electron, application can be run on many operation systems (Windows, MacOS, Linux).
 
 ## Screenshots from running app
 
